@@ -27,21 +27,7 @@ class ApiExceptionsHandler {
         ex.constraintViolations.forEach {
             message += (it.message.plus(" /n"))
         }
-
         return ErrorResponse(message)
     }
 
-//    private fun buildValidationErrors(violations: Set<ConstraintViolation<*>>): List<String> {
-//        return violations
-//            .stream()
-//            .map<Any>(Function<ConstraintViolation<*>, Any> { violation: ConstraintViolation<*> ->
-//                    field = StreamSupport.stream<Path.Node?>(
-//                    violation.propertyPath.spliterator(), false
-//                                error = violation.message
-//                )
-//                    .reduce { first: Path.Node?, second: Path.Node? -> second }
-//                    .orElse(null).toString()
-//            )..build()
-//        }).collect(toList())
-//    }
 }
